@@ -6,12 +6,9 @@ CC      = g++
 CCFLAGS = -std=c++17
 LDFLAGS = -o $(BIN)
 
-all: $(OBJ)
-    $(CC) $(LDFLAGS) $(OBJ)
+all: $(OBJ) ; $(CC) $(LDFLAGS) $(OBJ)
 
-%.o: %.cpp $(HDR)
-    $(CC) $(CCFLAGS) -c $<
+%.o: %.cpp $(HDR) ; $(CC) $(CCFLAGS) -c $<
 
 .PHONY: clean
-clean:
-    rm -rf *.o $(BIN)
+clean: ; rm -rf *.o $(BIN)
