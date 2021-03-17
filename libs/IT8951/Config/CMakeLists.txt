@@ -1,1 +1,0 @@
-add_library(DEV_Config DEV_Config.c)
