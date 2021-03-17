@@ -14,5 +14,5 @@ add_library(
 #)
 target_include_directories(gpio_driver PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/libs>)
 
-add_executable(epaper-tools main.cpp)
-target_link_libraries(epaper-tools gpio_driver)
+add_executable(epaper_tools main.cpp)
+target_link_libraries(epaper_tools gpio_driver)
