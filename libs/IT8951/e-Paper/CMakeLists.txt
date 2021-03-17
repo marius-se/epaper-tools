@@ -1,0 +1,1 @@
+add_library(EPD_IT8951 EPD_IT8951.c)

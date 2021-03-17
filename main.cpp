@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "./libs/IT8951/Config/DEV_Config.h"
-#include "./libs/IT8951/e-Paper/EPD_IT8951.h"
+#include "libs/IT8951/Config/DEV_Config.h"
+#include "libs/IT8951/e-Paper/EPD_IT8951.h"
 
 IT8951_Dev_Info deviceInfo;
 uint16_t panelWidth;
