@@ -12,3 +12,6 @@ target_link_libraries(epaper-tools DEV_Config)
 target_link_libraries(epaper-tools EPD_IT895)
 target_link_libraries(epaper-tools /usr/local/lib/libbcm2835.a)
 
+target_include_directories(epaper-tools PUBLIC "${PROJECT_BINARY_DIR}" "${PROJECT_SOURCE_DIR}/libs/IT8951/Config")
+target_include_directories(epaper-tools PUBLIC "${PROJECT_BINARY_DIR}" "${PROJECT_SOURCE_DIR}/libs/IT8951/e-Paper")
+
