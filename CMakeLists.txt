@@ -1,14 +1,14 @@
 cmake_minimum_required(VERSION 3.16.3)
-project(epaper_tools)
+project(epaper-tools)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(
-        epaper_tools
-        libs/IT8951/Config/Debug.h
-        libs/IT8951/Config/DEV_Config.c
-        libs/IT8951/Config/DEV_Config.h
-        libs/IT8951/e-Paper/EPD_IT8951.c
-        libs/IT8951/e-Paper/EPD_IT8951.h
-)
+add_library(DEV_Config STATIC libs/IT8951/Config/DEV_Config.c)
+add_library(EPD_IT895 STATIC libs/IT8951/e-Paper/EPD_IT8951.c)
+
+add_executable(epaper-tools main.cpp)
+
+target_link_libraries(epaper-tools DEV_Config)
+target_link_libraries(epaper-tools EPD_IT895)
+target_link_libraries(epaper-tools /usr/local/lib/libbcm2835.a)
 
